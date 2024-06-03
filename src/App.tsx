@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import GameGrid from "./components/GameGrid";
+import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -14,9 +15,8 @@ function App() {
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-      {/* only renders when screen size is greater than lg */}
       <Show above="lg">
-        <GridItem area="aside">Aside</GridItem>
+        <GenreList />
       </Show>
       <GridItem area="main">
         <GameGrid></GameGrid>
